@@ -17,8 +17,13 @@ public class ReviveCommand extends BaseCommand {
     public void onCommand(CommandArgs command) {
         Player player = command.getPlayer();
         String[] args = command.getArgs();
-        Player target = Bukkit.getPlayer(args[0]);
 
+        if (args.length == 0) {
+            player.sendMessage(CC.translate("&cUsage: /revive <playerName>"));
+            return;
+        }
+
+        Player target = Bukkit.getPlayer(args[0]);
         if (PlayerManager.getState(target.getUniqueId()) != PlayerState.DEAD) {
             player.sendMessage(CC.translate("&c" + target.getName() + " is not dead!"));
         } else {
