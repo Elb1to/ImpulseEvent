@@ -20,7 +20,7 @@ public class FinishCommand extends BaseCommand {
 
         for (Player players : Bukkit.getOnlinePlayers()) {
             players.setGameMode(GameMode.SURVIVAL);
-            PlayerManager.SetState(players.getUniqueId(), PlayerState.ALIVE);
+            PlayerManager.setState(players.getUniqueId(), PlayerState.ALIVE);
         }
 
         Bukkit.broadcastMessage(CC.translate("&b&lImpulseMC &7- &fAll players were revived!"));

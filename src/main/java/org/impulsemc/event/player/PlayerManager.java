@@ -10,7 +10,7 @@ public class PlayerManager {
 
     public static HashMap<UUID, PlayerState> playerState = new HashMap<>();
 
-    public static PlayerState SetState(UUID uuid, PlayerState state) {
+    public static PlayerState setState(UUID uuid, PlayerState state) {
         return playerState.put(uuid, state);
     }
 

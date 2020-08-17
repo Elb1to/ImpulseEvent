@@ -24,7 +24,7 @@ public class ReviveCommand extends BaseCommand {
         } else {
             target.setGameMode(GameMode.SURVIVAL);
             target.teleport(PlayerListener.deathLocation.get(target));
-            PlayerManager.SetState(target.getUniqueId(), PlayerState.ALIVE);
+            PlayerManager.setState(target.getUniqueId(), PlayerState.ALIVE);
 
             player.sendMessage(CC.translate("&aSuccessfully revived " + target.getName()));
 

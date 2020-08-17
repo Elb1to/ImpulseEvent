@@ -33,7 +33,7 @@ public class PlayerListener implements Listener {
         Player damager = event.getEntity().getKiller();
 
         if (PlayerManager.getState(player.getUniqueId()) == PlayerState.ALIVE) {
-            PlayerManager.SetState(player.getUniqueId(), PlayerState.DEAD);
+            PlayerManager.setState(player.getUniqueId(), PlayerState.DEAD);
             deathLocation.put(player, player.getLocation());
 
             player.spigot().respawn();
